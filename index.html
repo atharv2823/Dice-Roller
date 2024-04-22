@@ -51,45 +51,45 @@
 <body>
     <h1 class="Roller">Dice Roller</h1>
     <img src="./dice.png" alt="dice" class="dice-img" id="dice-img">
-    <button class="btn-roller" id="roller" onclick="roll()">Roll the Dice</button>
+    <button class="btn-roller" id="roller" onclick="roller()">Roll the Dice</button>
 
     <script>
-        function roll(){
+        function roller(){
            const min = 1;
            const max = 6;
 
            const randomNumber = Math.round(Math.random() * (max - min)) + min;
            
 
-           const img = document.getElementById("dice-img");
+           const imgElement = document.getElementById("dice-img");
            
             switch(randomNumber){
                 case 1:
-                img.src='dice1.png';
+                imgElement.src='dice1.png';
                 break;
                 case 2:
-                img.src='dice2.png';
+                imgElement.src='dice2.png';
                 break;
                 case 3:
-                img.src='dice3.png';
+                imgElement.src='dice3.png';
                 break;
                 case 4:
-                img.src='dice4.png';
+                imgElement.src='dice4.png';
                 break;
                 case 5:
-                img.src='dice5.png';
+                imgElement.src='dice5.png';
                 break;
                 case 6:
-                img.src='dice6.png';
+                imgElement.src='dice6.png';
                 break;
                 default:
                     imgElement.src = 'dice.png';
                 
             }
 
-            img.classList.add("animate");
+           imgElement.classList.add("animate");
             setTimeout(()=>{
-                img.classList.remove("animate");
+                imgElement.classList.remove("animate");
             })
 
         }
